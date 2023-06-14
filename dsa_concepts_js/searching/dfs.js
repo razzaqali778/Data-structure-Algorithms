@@ -1,3 +1,35 @@
+const dfs = (graph, startVertex) => {
+  const visited = new Set();
+
+  const traverse = (vertex) => {
+    console.log(vertex);
+    visited.add(vertex);
+
+    const neighbors = graph[vertex];
+    for (const neighbor of neighbors) {
+      if (!visited.has(neighbor)) {
+        traverse(neighbor);
+      }
+    }
+  };
+
+  traverse(startVertex);
+};
+
+const graph = {
+  A: ["B", "D"],
+  B: ["A", "C"],
+  C: ["B", "E"],
+  D: ["A"],
+  E: ["C"],
+};
+
+dfs(graph, "A");
+
+
+
+// Class approach
+
 class Graph {
   constructor() {
     this.adjacencyList = new Map();
