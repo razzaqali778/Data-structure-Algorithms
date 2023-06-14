@@ -1,3 +1,37 @@
+const bfs = (graph, startVertex) => {
+  const queue = [startVertex];
+  const visited = new Set();
+  visited.add(startVertex);
+
+  while (queue.length > 0) {
+    const vertex = queue.shift();
+    console.log(vertex);
+
+    const neighbors = graph[vertex];
+    for (const neighbor of neighbors) {
+      if (!visited.has(neighbor)) {
+        queue.push(neighbor);
+        visited.add(neighbor);
+      }
+    }
+  }
+};
+
+const graph = {
+  A: ["B", "D"],
+  B: ["A", "C"],
+  C: ["B", "E"],
+  D: ["A"],
+  E: ["C"],
+};
+
+bfs(graph, "A");
+
+
+
+
+//Class approach
+
 class Graph {
   constructor() {
     this.adjacencyList = new Map();
@@ -45,3 +79,10 @@ graph.addEdge("A", "D");
 graph.addEdge("B", "C");
 graph.addEdge("C", "E");
 graph.bfs("A");
+
+
+
+
+
+
+
