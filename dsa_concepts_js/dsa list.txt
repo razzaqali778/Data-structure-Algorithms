@@ -1,0 +1,72 @@
+Sorting Algorithms:
+
+Bubble Sort
+Selection Sort
+Insertion Sort
+Merge Sort
+Quick Sort
+Heap Sort
+Radix Sort
+
+
+Searching Algorithms:
+
+Linear Search
+Binary Search
+Depth-First Search (DFS)
+Breadth-First Search (BFS)
+
+
+
+Graph Algorithms:
+
+Dijkstra's Algorithm
+Bellman-Ford Algorithm
+Kruskal's Algorithm (for Minimum Spanning Trees)
+Prim's Algorithm (for Minimum Spanning Trees)
+
+
+
+Dynamic Programming:
+
+Fibonacci Series
+Longest Common Subsequence (LCS)
+Knapsack Problem
+Tree Algorithms:
+
+Binary Search Tree (BST) operations (insertion, deletion, search, etc.)
+Depth-First Traversal (Inorder, Preorder, Postorder)
+Breadth-First Traversal
+
+
+
+String Algorithms:
+
+String Matching (Brute Force, Knuth-Morris-Pratt, Boyer-Moore)
+Longest Common Substring
+String Reversal
+
+
+
+Numerical Algorithms:
+
+Prime Number Generation
+Factorial Calculation
+Euclidean Algorithm (GCD calculation)
+
+
+
+Cryptographic Algorithms:
+
+Hashing Algorithms (MD5, SHA-1, SHA-256)
+Encryption Algorithms (AES, RSA)
+
+
+
+Machine Learning Algorithms:
+
+Linear Regression
+Logistic Regression
+K-Means Clustering
+Decision Trees
+Support Vector Machines (SVM)
