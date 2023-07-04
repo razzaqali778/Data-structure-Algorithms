@@ -22,13 +22,33 @@
 //   return node;
 // }
 
-
+//recurrsion
 function maxDepth(root) {
   if (root === null) return 0;
 
   return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
 }
 
+//bfs
 
+function maxDepth(root) {
+ if (!root) {
+    return 0;
+  }
+  let depth = 0;
+  let queue = [root];
+
+  while (queue.length) {
+    let len = queue.length;
+
+    for (let i = 0; i < len; i++) {
+      let current = queue.shift();
+      if (current.left) queue.push(current.left);
+      if (current.right) queue.push(current.right);
+    }
+    depth++;
+  }
+  return depth;
+}
 //Input: root = [3,9,20,null,null,15,7]
 //Output: 3
