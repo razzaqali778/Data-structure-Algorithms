@@ -1,23 +1,15 @@
-const selectionSort = (arr) => {
-  const len = arr.length;
-
-  for (let i = 0; i < len - 1; i++) {
-    let minIndex = i;
-
-    for (let j = i + 1; j < len; j++) {
-      if (arr[j] < arr[minIndex]) {
-        minIndex = j;
+ function selectionSort(nums) {
+    for (let i = 0; i < nums.length; i++) {
+      let minIndex = i
+      for (let j = i + 1; j < nums.length; j++) {
+        if (nums[j] < nums[minIndex]) {
+          minIndex = j
+        }
       }
+      ;[nums[i], nums[minIndex]] = [nums[minIndex], nums[i]]
     }
 
-    if (minIndex !== i) {
-      [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
-    }
+    return nums
   }
 
-  return arr;
-};
-
-const array = [5, 3, 8, 4, 2];
-const sortedArray = selectionSort(array);
-console.log(sortedArray);
+  console.log(selectionSort([2, 4, 3, 6, 5, 1]))
