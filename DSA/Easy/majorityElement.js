@@ -18,3 +18,36 @@ var majorityElement = function (nums) {
     }
   }
   console.log(majorityElement([2, 2, 1, 1, 1, 2, 2]))
+
+
+
+---------->>>>>>>>>>>>>>>>>>>>Shorthand <<<<<<<<<<<<<<<<<<<------------------
+
+
+var majorityElement = function (nums) {
+  const occuranceOfElement = new Map();
+
+  for (const num of nums) {
+    occuranceOfElement.set(num, (occuranceOfElement.get(num) || 0) + 1);
+  }
+
+  for (let [key, value] of occuranceOfElement) {
+    if (value > nums.length / 2) return key;
+  }
+};
+
+console.log(majorityElement([2, 2, 1, 1, 1, 2, 2]));
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
